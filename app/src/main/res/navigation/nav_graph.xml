@@ -20,10 +20,17 @@
         <action
             android:id="@+id/action_planetFragment_to_planetDetailFragment"
             app:destination="@id/planetDetailFragment" />
+        <argument
+            android:name="planetModel"
+            app:argType="com.caganbicakci.spaceexplorer.model.PlanetModel" />
     </fragment>
     <fragment
         android:id="@+id/planetDetailFragment"
         android:name="com.caganbicakci.spaceexplorer.fragments.PlanetDetailFragment"
         android:label="fragment_planet_detail"
-        tools:layout="@layout/fragment_planet_detail" />
+        tools:layout="@layout/fragment_planet_detail" >
+        <argument
+            android:name="planetModel"
+            app:argType="com.caganbicakci.spaceexplorer.model.PlanetModel" />
+    </fragment>
 </navigation>

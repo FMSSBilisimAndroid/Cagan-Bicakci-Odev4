@@ -13,7 +13,6 @@ import androidx.navigation.fragment.findNavController
 import com.caganbicakci.spaceexplorer.R
 import com.caganbicakci.spaceexplorer.databinding.FragmentHomeBinding
 
-
 class HomeFragment : Fragment() {
 
     private lateinit var fragmentHomeBinding: FragmentHomeBinding

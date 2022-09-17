@@ -5,7 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.caganbicakci.spaceexplorer.R
+import androidx.navigation.fragment.navArgs
+import com.caganbicakci.spaceexplorer.BR
+import com.caganbicakci.spaceexplorer.databinding.FragmentPlanetDetailBinding
+import com.caganbicakci.spaceexplorer.databinding.PlanetItemBinding
+import com.caganbicakci.spaceexplorer.model.PlanetModel
 
 /**
  * A simple [Fragment] subclass.
@@ -14,11 +18,24 @@ import com.caganbicakci.spaceexplorer.R
  */
 class PlanetDetailFragment : Fragment() {
 
+    private lateinit var fragmentPlanetDetailBinding: FragmentPlanetDetailBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_planet_detail, container, false)
+        fragmentPlanetDetailBinding = FragmentPlanetDetailBinding.inflate(inflater)
+        return fragmentPlanetDetailBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val args: PlanetDetailFragmentArgs by navArgs()
+
+        fragmentPlanetDetailBinding.apply {
+            setVariable(BR.planetModel, args.planetModel)
+        }
     }
 }
