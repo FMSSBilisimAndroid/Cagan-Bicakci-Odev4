@@ -10,8 +10,8 @@
         tools:context=".fragments.HomeFragment">
 
         <TextView
-            android:id="@+id/tv_test"
-            style="@style/homeTextStyle"
+            android:id="@+id/tv_home"
+            style="@style/whiteNunito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
