@@ -2,23 +2,37 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
-        tools:context=".HomeFragment">
+        android:orientation="vertical"
+        tools:context=".fragments.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/tv_test"
+            style="@style/homeTextStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/lets_explore" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/astronomer"
+            android:src="@drawable/astronomer" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_lets_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/lets_go_btn_text"
+            style="@style/homeBtnStyle"/>
 
     </LinearLayout>
 </layout>

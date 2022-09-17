@@ -3,16 +3,17 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 
 android {
     namespace 'com.caganbicakci.spaceexplorer'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.caganbicakci.spaceexplorer"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -44,8 +45,9 @@ dependencies {
 
     def retrofit_version = "2.9.0"
     def nav_version = "2.5.2"
+    def picasso_version = "2.8"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -63,4 +65,6 @@ dependencies {
 
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation "com.squareup.picasso:picasso:$picasso_version"
 }
