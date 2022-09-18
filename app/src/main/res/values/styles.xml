@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <style name="roundedImageView" parent="">
+    <style name="roundedImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style>
 
-    <style name="roundedImagePlanetDetail" parent="">
+    <style name="roundedImagePlanetDetail" >
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeBottomLeft">65dp</item>
         <item name="cornerSizeBottomRight">65dp</item>
@@ -26,18 +26,6 @@
         <item name="android:textColor">@color/soft_orange</item>
     </style>
 
-    <style name="homeBtnStyle">
-        <item name="backgroundTint">@color/soft_purple</item>
-        <item name="android:gravity">center</item>
-        <item name="icon">@drawable/rocket</item>
-        <item name="iconGravity">textEnd</item>
-        <item name="iconTint">@null</item>
-        <item name="textAllCaps">false</item>
-        <item name="android:textSize">22sp</item>
-        <item name="android:fontWeight">700</item>
-        <item name="cornerRadius">50dp</item>
-    </style>
-
     <style name="planetDescriptionTextStyle">
         <item name="fontFamily">@font/nunito</item>
         <item name="android:gravity">start</item>
@@ -49,7 +37,6 @@
         <item name="android:focusable">true</item>
         <item name="android:maxLines">4</item>
     </style>
-
 
     <style name="planetNameTextStyle">
         <item name="android:layout_marginBottom">8dp</item>
@@ -68,13 +55,6 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-
-    <style name="dividerStyle">
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="dividerColor">@color/black</item>
-        <item name="dividerThickness">1dp</item>
-    </style>
-
     <style name="infoCardTextStyle">
         <item name="android:textColor">@color/soft_orange</item>
         <item name="android:fontWeight">700</item>
@@ -83,12 +63,30 @@
         <item name="android:padding">8dp</item>
     </style>
 
+    <style name="homeBtnStyle">
+        <item name="backgroundTint">@color/soft_purple</item>
+        <item name="android:gravity">center</item>
+        <item name="icon">@drawable/rocket</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconTint">@null</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontWeight">700</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
     <style name="backBtnStyle">
         <item name="android:layout_marginStart">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:padding">8dp</item>
         <item name="android:src">?attr/actionModeCloseDrawable</item>
         <item name="android:background">@drawable/round_bg</item>
+    </style>
+
+    <style name="dividerStyle">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="dividerColor">@color/black</item>
+        <item name="dividerThickness">1dp</item>
     </style>
 
 </resources>

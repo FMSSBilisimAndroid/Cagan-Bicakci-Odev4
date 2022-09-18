@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.caganbicakci.spaceexplorer.BR
-import com.caganbicakci.spaceexplorer.PlanetClickHandler
-import com.caganbicakci.spaceexplorer.PlanetItemDecoration
+import com.caganbicakci.spaceexplorer.recyclerview.PlanetClickHandler
+import com.caganbicakci.spaceexplorer.recyclerview.PlanetItemDecoration
 import com.caganbicakci.spaceexplorer.databinding.FragmentPlanetBinding
 import com.caganbicakci.spaceexplorer.model.PlanetModel
 import com.caganbicakci.spaceexplorer.recyclerview.PlanetAdapter

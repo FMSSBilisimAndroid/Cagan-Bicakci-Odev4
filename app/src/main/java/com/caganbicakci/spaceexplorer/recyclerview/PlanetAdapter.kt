@@ -7,13 +7,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import com.caganbicakci.spaceexplorer.BR
-import com.caganbicakci.spaceexplorer.PlanetClickHandler
 import com.caganbicakci.spaceexplorer.R
 import com.caganbicakci.spaceexplorer.databinding.PlanetItemBinding
 import com.caganbicakci.spaceexplorer.model.PlanetModel
 
 class PlanetAdapter(private val planetList: List<PlanetModel>,
-private val clickHandler: PlanetClickHandler) :
+private val clickHandler: PlanetClickHandler
+) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

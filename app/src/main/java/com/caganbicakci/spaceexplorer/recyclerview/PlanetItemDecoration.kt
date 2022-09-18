@@ -1,4 +1,4 @@
-package com.caganbicakci.spaceexplorer
+package com.caganbicakci.spaceexplorer.recyclerview
 
 import android.graphics.Rect
 import android.view.View
