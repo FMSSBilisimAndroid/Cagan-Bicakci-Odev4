@@ -11,11 +11,12 @@
 
         <TextView
             android:id="@+id/tv_home"
+            style="@style/whiteNunitoText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="@string/lets_explore"
-            style="@style/white_nunito_text_style"/>
+            android:textFontWeight="800"
+            android:text="@string/lets_explore" />
 
 
         <ImageView
@@ -27,12 +28,12 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_lets_go"
+            style="@style/homeBtnStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginHorizontal="15dp"
             android:fontFamily="@font/open_sans"
-            android:text="@string/lets_go_btn_text"
-            style="@style/homeBtnStyle"/>
+            android:text="@string/lets_go_btn_text" />
 
     </LinearLayout>
 </layout>

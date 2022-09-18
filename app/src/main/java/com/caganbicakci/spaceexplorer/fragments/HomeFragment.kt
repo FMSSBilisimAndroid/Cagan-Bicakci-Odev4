@@ -33,8 +33,8 @@ class HomeFragment : Fragment() {
 
             tvHome.text = getString(R.string.lets_explore)
 
-            setTextStyleSpan(tvHome, 18, 30, R.style.orangeOpenSans)
-            setTextStyleSpan(tvHome, 36, 44, R.style.orangeOpenSans)
+            setTextStyleSpan(tvHome, 18, 30, R.style.orangeOpenSansText)
+            setTextStyleSpan(tvHome, 36, 44, R.style.orangeOpenSansText)
 
             btnLetsGo.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_planetFragment)
