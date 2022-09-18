@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Space Explorer</string>
+    <string name="lets_explore">Let\'s Explore the Solar System with Explorer</string>
+    <string name="astronomer">Astronomer</string>
+    <string name="lets_go_btn_text">Let\'s Go</string>
+    <string name="more">More…</string>
+    <string name="planet_order">Planet order: %s</string>
+
 </resources>
