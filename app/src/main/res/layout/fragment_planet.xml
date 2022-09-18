@@ -21,17 +21,18 @@
             android:adapter="@{adapter}"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/space_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:lottie_rawRes="@raw/space_loading"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
