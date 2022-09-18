@@ -22,7 +22,7 @@ import retrofit2.Response
 class PlanetFragment : Fragment(), PlanetClickHandler {
 
     private lateinit var fragmentPlanetBinding: FragmentPlanetBinding
-    //private lateinit var planetList: List<PlanetModel>
+    private val clickHandler = this
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +36,20 @@ class PlanetFragment : Fragment(), PlanetClickHandler {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val clickHandler = this
+
+        getPlanets()
+    }
+
+    override fun clickedPlanetItem(planetModel: PlanetModel) {
+        findNavController().apply {
+            val action = PlanetFragmentDirections.actionPlanetFragmentToPlanetDetailFragment(planetModel)
+            navigate(action)
+        }
+    }
+
+    private fun getPlanets(){
+
+        fragmentPlanetBinding.progressBar.visibility = View.VISIBLE
 
         SpaceApi.retrofitService.getProperties().enqueue(object: Callback<List<PlanetModel>> {
             override fun onResponse(call: Call<List<PlanetModel>>, response: Response<List<PlanetModel>>){
@@ -48,6 +61,7 @@ class PlanetFragment : Fragment(), PlanetClickHandler {
                         recyclerView.layoutManager = gridLayoutManager
                         recyclerView.addItemDecoration(PlanetItemDecoration(20))
                         setVariable(BR.adapter,adapter)
+                        progressBar.visibility = View.GONE
                     }
                 }
             }
@@ -57,13 +71,6 @@ class PlanetFragment : Fragment(), PlanetClickHandler {
             }
 
         })
-    }
-
-    override fun clickedPlanetItem(planetModel: PlanetModel) {
-        findNavController().apply {
-            val action = PlanetFragmentDirections.actionPlanetFragmentToPlanetDetailFragment(planetModel)
-            navigate(action)
-        }
     }
 
 }
