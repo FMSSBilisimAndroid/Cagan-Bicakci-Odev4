@@ -60,7 +60,7 @@ class PlanetFragment : Fragment(), PlanetClickHandler {
          * Finally set progress bar visibility to [View.GONE]
          */
 
-        fragmentPlanetBinding.progressBar.visibility = View.VISIBLE
+        fragmentPlanetBinding.spaceLoading.visibility = View.VISIBLE
 
         SpaceApi.retrofitService.getProperties().enqueue(object : Callback<List<PlanetModel>> {
             override fun onResponse(
@@ -75,7 +75,7 @@ class PlanetFragment : Fragment(), PlanetClickHandler {
                         recyclerView.layoutManager = gridLayoutManager
                         recyclerView.addItemDecoration(PlanetItemDecoration(20))
                         setVariable(BR.adapter, adapter)
-                        progressBar.visibility = View.GONE
+                        spaceLoading.visibility = View.GONE
                     }
                 }
             }
