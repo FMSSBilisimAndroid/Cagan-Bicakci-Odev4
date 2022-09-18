@@ -1,8 +1,6 @@
 # Cagan-Bicakci-Odev4
 ## Space Explorer App
 
-
-
 <p float="left">
   <img src="https://user-images.githubusercontent.com/44499663/190925273-bd349652-af27-48cb-beb3-f95266ef7457.png" width="30%" height="30%"/>
   <img src="https://user-images.githubusercontent.com/44499663/190926188-73c18d95-7649-4a01-900e-af9e37d08d3e.png" width="30%" height="30%"/>
