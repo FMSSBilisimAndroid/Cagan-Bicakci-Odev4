@@ -38,4 +38,12 @@
         <item name="cornerRadius">50dp</item>
     </style>
 
+    <style name="planetDescriptionTextStyle">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textColor">@color/soft_orange</item>
+    </style>
+
 </resources>
