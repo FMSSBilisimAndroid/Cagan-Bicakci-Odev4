@@ -43,7 +43,12 @@ class HomeFragment : Fragment() {
 
     }
 
-    //spannable feature required min api 28
+    /**
+     * spannable feature required minimum api 28
+     *created different styles to apply into textview
+     * call this method with attributes you want to change
+     *
+     */
     private fun setTextStyleSpan(
         textView: TextView,
         startPosition: Int,
@@ -51,16 +56,16 @@ class HomeFragment : Fragment() {
         style: Int
     ) {
 
-        val spannableStr = SpannableString(textView.text)
+        val spannableString = SpannableString(textView.text)
 
-        spannableStr.setSpan(
+        spannableString.setSpan(
             TextAppearanceSpan(context, style),
             startPosition,
             endPosition,
             Spanned.SPAN_INCLUSIVE_EXCLUSIVE
         )
 
-        textView.text = spannableStr
+        textView.text = spannableString
 
     }
 }

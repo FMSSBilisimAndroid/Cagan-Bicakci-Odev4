@@ -35,23 +35,38 @@ class PlanetDetailFragment : Fragment() {
 
 
         fragmentPlanetDetailBinding.apply {
+
             setVariable(BR.planetModel, args.planetModel)
 
+            /**
+             * tvPlanetOrder.text = eg. "Planet order: 3" for Earth
+             */
             tvPlanetOrder.text = getString(R.string.planet_order, args.planetModel.planetOrder)
+
+
+            /**
+             * tvPlanetDescription.text applied max lines as 4.
+             * If it clicked in ui, expands text and if it clicked again it collapse.
+             * and has ellipsize at end "..."
+             */
 
             tvPlanetDescription.setOnClickListener {
 
-                if (isCollapsed) {
-                    tvPlanetDescription.maxLines = Int.MAX_VALUE
-                    tvPlanetDescription.ellipsize = null
-                } else {
-                    tvPlanetDescription.maxLines = 4
-                    tvPlanetDescription.ellipsize = TextUtils.TruncateAt.END
+                tvPlanetDescription.apply {
+                    if (isCollapsed) {
+                        maxLines = Int.MAX_VALUE
+                        ellipsize = null
+                    } else {
+                        maxLines = 4
+                        ellipsize = TextUtils.TruncateAt.END
+                    }
+                    isCollapsed = !isCollapsed
                 }
-                isCollapsed = !isCollapsed
             }
 
-            wikiLinkCard.setOnClickListener{
+
+            //for opening wikipedia link from planetModel on browser
+            wikiLinkCard.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(args.planetModel.wikiLink))
                 startActivity(intent)
             }
